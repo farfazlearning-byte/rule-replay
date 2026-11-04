@@ -1,1 +1,10 @@
+name = "rule-replay"
+main = "worker.js"
+compatibility_date = "2025-11-01"
 
+[ai]
+binding = "AI"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
