@@ -19,7 +19,7 @@ Built for the **Meta Global AI Developer Hackathon** (Cerebral Valley, November 
 
 ## Honest results
 
-In the observed live runs, Llama 3.3 70B's proposed plans **failed verification**: the model repeatedly tried to `collect` on a square with no star (step 4), and the bounded repair attempt failed too, on a different rule. The product reports `not_verified` with both counterexamples, exactly as designed. The demo video shows this real outcome; no simulated success is substituted anywhere. The interesting engineering result is that fluent model plans need independent checking, and that a single counterexample-grounded repair was not enough for this fixture.
+In the observed live runs, Llama 3.3 70B's proposed plans **failed verification**: the model repeatedly tried to `collect` on a square with no star (step 4), and the bounded repair attempt failed too, at the same step. The product reports `not_verified` with both counterexamples, exactly as designed. The demo video shows this real outcome; no simulated success is substituted anywhere. The interesting engineering result is that fluent model plans need independent checking, and that a single counterexample-grounded repair was not enough for this fixture.
 
 ## Scope and limits
 
