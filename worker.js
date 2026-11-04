@@ -2,7 +2,7 @@ var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 
 // src/simulator.js
-var ROBOT = Object.freeze({ id: "robot", source: "A pretend robot starts at square 0. At square 0 the card is green. At square 1 the first card is red and the next card is green. At square 2 the card is green. Green permits one forward move. Red forbids forward movement. Waiting one turn changes the red card to green. Collecting a star does not change the card. Stars are on squares 1 and 3. A star can only be collected while standing on its square. Goal: collect both stars and finish on square 3.", allowed: ["forward", "wait", "collect"], goal: "collect two stars and finish at square 3" });
+var ROBOT = Object.freeze({ id: "robot", source: "A pretend robot starts at square 0. At square 0 the card is green. At square 1 the first card is red and the next card is green. At square 2 the card is green. Green permits one forward move. Red forbids forward movement. Waiting one turn changes the red card to green. Waiting is allowed only while the card is red. Collecting a star does not change the card. Stars are on squares 1 and 3. A star can only be collected while standing on its square. Goal: collect both stars and finish on square 3.", allowed: ["forward", "wait", "collect"], goal: "collect two stars and finish at square 3" });
 function simulate(actions) {
   if (!Array.isArray(actions) || actions.length < 1 || actions.length > 16) return { ok: false, error: "Plan must contain 1-16 actions.", trace: [] };
   let pos = 0, waited = false, collected = [];
